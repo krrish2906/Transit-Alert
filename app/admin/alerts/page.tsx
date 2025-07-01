@@ -61,7 +61,7 @@ export default function AlertPage() {
                         </label>
                     </form>
                 </div>
-                <div className='w-full flex justify-end'>
+                <div className='w-full flex justify-end px-16'>
                     <button className='bg-[#1285E8] px-5 py-2 text-white rounded-full font-semibold cursor-pointer'>
                         Raise Alert
                     </button>
