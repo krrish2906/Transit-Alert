@@ -14,8 +14,11 @@ export default function Navbar() {
                         alt='logo'
                         width={16}
                         height={16}
-                        />
-                    <h1 className='font-bold text-xl'>TransitAlert</h1>
+                        className='cursor-pointer'
+                    />
+                    <h1 className='font-bold text-xl cursor-pointer'>
+                        <Link href='/'>TransitAlert</Link>
+                    </h1>
                 </div>
                 <div className='pl-8'>
                     <ul className='flex gap-x-6 text-zinc-800'>
@@ -26,7 +29,7 @@ export default function Navbar() {
                             <Link href={"/routes"}>Routes</Link>
                         </li>
                         <li>
-                            <Link href={"/alert"}>Alerts</Link>
+                            <Link href={"/alerts"}>Alerts</Link>
                         </li>
                         <li>
                             <Link href={"/contact"}>Contact</Link>

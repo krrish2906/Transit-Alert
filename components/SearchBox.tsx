@@ -7,5 +7,5 @@ export default function SearchBox() {
             <IoSearchOutline className='size-6' />
             <input type="text" name="" id="" placeholder='Search for route' className='placeholder-[#4A739C] outline-none' />
         </div>
-    )
+    );
 };
