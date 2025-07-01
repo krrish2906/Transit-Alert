@@ -5,6 +5,7 @@ export default function ContactPage() {
     return (
         <div className='h-full w-full bg-white text-black flex flex-col items-center'>
             <div className='w-4/5 my-10'>
+                {/* Contact Form */}
                 <div className='w-full flex flex-col gap-y-5 mb-5'>
                     <div>
                         <h2 className='font-bold text-[32px]'>Contact Us</h2>
@@ -12,7 +13,7 @@ export default function ContactPage() {
                             We’re here to help! Reach out to us through any of the channels below.
                         </p>
                     </div>
-                    <form className='flex flex-col gap-y-5'>
+                    <form className='flex flex-col gap-y-5 mt-4'>
                         <p className='font-bold text-[19px]'>Contact Form</p>
                         <label className='flex flex-col gap-y-2'>
                             <span className='font-medium text-base'>Your Name</span>
@@ -60,9 +61,11 @@ export default function ContactPage() {
                         </div>
                     </form>
                 </div>
+
+                {/* Other ways to reach us */}
                 <div className='w-full'>
                     <p className='font-bold text-xl'>Other Ways to Reach Us</p>
-                    <div className='w-3/4 h-0.5 bg-gray-200/50 mt-6'></div>
+                    <div className='w-4/5 h-0.5 bg-gray-200/50 mt-6'></div>
                     <div className='flex gap-8 py-4'>
                         <div>
                             <span className='text-sm text-[#5C738A]'>Email</span>
@@ -76,18 +79,27 @@ export default function ContactPage() {
                     <div className='w-1/6 h-0.5 bg-gray-200/50 mt-6'></div>
                     <div className='py-5'>
                         <span className='text-sm text-[#5C738A]'>Social Media</span>
-                        <p>Follow us on social media</p>
-                        <p>for updates and support</p>
+                        <p className='text-sm'>Follow us on social media</p>
+                        <p className='text-sm'>for updates and support</p>
                     </div>
-                    <div className='flex gap-10'>
-                        <div className='bg-[#EBEDF2] p-2 rounded-full'>
-                            <PiTwitterLogo className='size-6' />
+                    <div className='flex gap-10 pl-5 mt-2'>
+                        <div className='flex flex-col items-center gap-3'>
+                            <div className='bg-[#EBEDF2] p-2.5 rounded-full w-fit'>
+                                <PiTwitterLogo className='size-6' />
+                            </div>
+                            <span className='text-sm'>Twitter</span>
                         </div>
-                        <div className='bg-[#EBEDF2] p-2 rounded-full'>
-                            <PiFacebookLogo className='size-6' />
+                        <div className='flex flex-col items-center gap-3'> 
+                            <div className='bg-[#EBEDF2] p-2.5 rounded-full w-fit'>
+                                <PiFacebookLogo className='size-6' />
+                            </div>
+                            <span className='text-sm'>Facebook</span>
                         </div>
-                        <div className='bg-[#EBEDF2] p-2 rounded-full'>
-                            <PiInstagramLogo className='size-6' />
+                        <div className='flex flex-col items-center gap-3'>
+                            <div className='bg-[#EBEDF2] p-2.5 rounded-full w-fit'>
+                                <PiInstagramLogo className='size-6' />
+                            </div>
+                            <span className='text-sm'>Instagram</span>
                         </div>
                     </div>
                 </div>
