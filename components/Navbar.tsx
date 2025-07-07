@@ -9,13 +9,15 @@ export default function Navbar() {
         <nav className='w-full h-[4rem] bg-white text-black flex justify-between items-center border-b border-gray-400/50 px-8'>
             <div className='flex h-full items-center'>
                 <div className='flex items-center gap-x-4'>
-                    <Image
-                        src='/logo.svg'
-                        alt='logo'
-                        width={16}
-                        height={16}
-                        className='cursor-pointer'
-                    />
+                    <Link href='/'>
+                        <Image
+                            src='/logo.svg'
+                            alt='logo'
+                            width={16}
+                            height={16}
+                            className='cursor-pointer'
+                        />
+                    </Link>
                     <h1 className='font-bold text-xl cursor-pointer'>
                         <Link href='/'>TransitAlert</Link>
                     </h1>
@@ -23,16 +25,16 @@ export default function Navbar() {
                 <div className='pl-8'>
                     <ul className='flex gap-x-6 text-zinc-800'>
                         <li>
-                            <Link href={"/"}>Home</Link>
+                            <Link href="/">Home</Link>
                         </li>
                         <li>
-                            <Link href={"/routes"}>Routes</Link>
+                            <Link href="/routes">Routes</Link>
                         </li>
                         <li>
-                            <Link href={"/alerts"}>Alerts</Link>
+                            <Link href="/alerts">Alerts</Link>
                         </li>
                         <li>
-                            <Link href={"/contact"}>Contact</Link>
+                            <Link href="/contact">Contact</Link>
                         </li>
                     </ul>
                 </div>

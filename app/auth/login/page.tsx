@@ -11,7 +11,9 @@ export default function LogInPage() {
     return (
         <div className='h-[calc(100vh-4rem)] w-full bg-white text-black flex flex-col items-center'>
             <div className='mt-18'>
-                <h1 className='font-bold text-3xl'>Welcome Back!</h1>
+                <h1 className='font-bold text-3xl'>
+                    <span className='text-[#0D80F2]'>Welcome</span> Back!
+                </h1>
             </div>
             <form className='flex flex-col gap-y-5 mt-8 w-3/4 items-center'>
                 <label className='flex flex-col gap-y-2 w-1/2'>
@@ -41,6 +43,9 @@ export default function LogInPage() {
                                 showPassword ? <PiEye className="size-5" /> : <PiEyeClosed className="size-5" />
                             }
                         </button>
+                    </div>
+                    <div className='flex justify-end'>
+                        <span className='text-sm text-[#4A739C] cursor-pointer hover:underline'>Forgot password?</span>
                     </div>
                 </label>
                 <div className='w-1/2 flex flex-col justify-center mt-1 gap-y-5'>

@@ -120,7 +120,7 @@ export default function SignUpPage() {
     
     return (
         <div className='h-full min-h-[calc(100vh-4rem)] w-full bg-white text-black flex flex-col items-center pb-1'>
-            <div className='mt-10'>
+            <div className='mt-8'>
                 <h1 className='font-bold text-3xl'>
                     Sign up for{" "}
                     <span className='text-[#0D80F2]'>TransitAlert</span>
@@ -284,7 +284,7 @@ export default function SignUpPage() {
                     </form>
                 )
             }
-            <div className='mt-5 mb-10'>
+            <div className='mt-5 mb-5'>
                 <p className='text-sm text-[#4A739C] tracking-wide'>
                     Already have an account?{" "}
                     <Link href='/auth/login' className='hover:underline'>Log in</Link>
