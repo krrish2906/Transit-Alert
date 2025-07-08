@@ -137,7 +137,7 @@ export default function SignUpPage() {
                             <span className='font-medium text-base'>Email</span>
                             <input
                                 type='email'
-                                required={true}
+                                required
                                 value={emailAddress}
                                 onChange={(e) => setEmailAddress(e.target.value)}
                                 placeholder='Enter your email'
@@ -158,7 +158,7 @@ export default function SignUpPage() {
                             <div className="relative w-full">
                                 <input
                                     type={showPassword ? "text" : "password"}
-                                    required={true}
+                                    required
                                     value={password}
                                     onChange={(e) => setPassword(e.target.value)}
                                     placeholder="Enter your password"
@@ -196,7 +196,7 @@ export default function SignUpPage() {
                             <div className="relative w-full">
                                 <input
                                     type={showConfirmPassword ? "text" : "password"}
-                                    required={true}
+                                    required
                                     value={confirmPassword}
                                     onChange={(e) => setConfirmPassword(e.target.value)}
                                     placeholder="Confirm your password"
