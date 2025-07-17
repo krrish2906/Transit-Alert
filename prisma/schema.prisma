@@ -14,19 +14,19 @@ datasource db {
 }
 
 model User {
-    id     String  @id
-    name   String
-    profilePic String @default("https://ik.imagekit.io/krishbansal29/blogs/avatardefault.png?updatedAt=1749569332294")
-    email  String  @unique
-    role   Role    @default(USER)
-    alerts Alert[]
+    id         String  @id
+    name       String
+    profilePic String  @default("https://ik.imagekit.io/krishbansal29/blogs/avatardefault.png?updatedAt=1749569332294")
+    email      String  @unique
+    role       Role    @default(USER)
+    alerts     Alert[]
 }
 
 model Alert {
     id        String        @id @default(cuid())
     title     String
     message   String
-    type      AlertType
+    type      AlertType     @default(RAIN)
     severity  AlertSeverity @default(MEDIUM)
     location  String
     postedBy  User          @relation(fields: [userId], references: [id])

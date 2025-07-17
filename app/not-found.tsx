@@ -11,7 +11,7 @@ export default function NotFound() {
                 height={100}
                 className='size-120'
             />
-            <Link href="/" className='text-black font-semibold'>
+            <Link href="/" className='text-white bg-[#6dbdff] rounded-md text-base font-semibold py-2 px-4'>
                 Return Home
             </Link>
         </div>

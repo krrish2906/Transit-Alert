@@ -1,8 +1,11 @@
 "use client"
 
 import React, { useState } from 'react'
+import { useUser } from '@clerk/nextjs';
 
 export default function ProfilePage() {
+    const { user } = useUser();
+    
     const [isChecked1, setIsChecked1] = useState(false)
     const [isChecked2, setIsChecked2] = useState(false)
 
@@ -26,15 +29,21 @@ export default function ProfilePage() {
                     <div className='flex flex-col gap-y-4'>
                         <div className='flex flex-col gap-y-2'>
                             <span className='font-medium text-base'>Name</span>
-                            <p className='outline-none w-1/3 h-10 border border-gray-200 px-4 py-3 rounded-xl'></p>
+                            <p className='outline-none w-1/3 h-10 border border-gray-200 px-4 py-3 rounded-xl flex items-center font-light text-base'>
+                                { user?.fullName }
+                            </p>
                         </div>
                         <div className='flex flex-col gap-y-2'>
                             <span className='font-medium text-base'>Email</span>
-                            <p className='outline-none w-1/3 h-10 border border-gray-200 px-4 py-3 rounded-xl'></p>
+                            <p className='outline-none w-1/3 h-10 border border-gray-200 px-4 py-3 rounded-xl flex items-center font-light text-base'>
+                                { user?.primaryEmailAddress?.emailAddress }
+                            </p>
                         </div>
                         <div className='flex flex-col gap-y-2'>
                             <span className='font-medium text-base'>Phone Number</span>
-                            <p className='outline-none w-1/3 h-10 border border-gray-200 px-4 py-3 rounded-xl'></p>
+                            <p className='outline-none w-1/3 h-10 border border-gray-200 px-4 py-3 rounded-xl flex items-center font-light text-base'>
+                                +123 456 7890
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -53,9 +62,10 @@ export default function ProfilePage() {
                                     type='checkbox'
                                     className='sr-only'
                                     checked={isChecked1}
+                                    onClick={() => handleCheckboxChange(1)}
                                 />
                                 <div
-                                    className='block h-8 w-14 rounded-full bg-[#E5E7EB] cursor-pointer'
+                                    className={`block h-8 w-14 rounded-full cursor-pointer ${isChecked1 ? "bg-blue-500" : "bg-[#E5E7EB]"}`}
                                     onClick={() => handleCheckboxChange(1)}>
                                 </div>
                                 <div
@@ -75,9 +85,10 @@ export default function ProfilePage() {
                                     type='checkbox'
                                     className='sr-only'
                                     checked={isChecked2}
+                                    onClick={() => handleCheckboxChange(2)}
                                 />
                                 <div
-                                    className='block h-8 w-14 rounded-full bg-[#E5E7EB] cursor-pointer'
+                                    className={`block h-8 w-14 rounded-full cursor-pointer ${isChecked2 ? "bg-blue-500" : "bg-[#E5E7EB]"}`}
                                     onClick={() => handleCheckboxChange(2)}>
                                 </div>
                                 <div
