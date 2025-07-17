@@ -16,6 +16,7 @@ datasource db {
 model User {
     id     String  @id
     name   String
+    profilePic String @default("https://ik.imagekit.io/krishbansal29/blogs/avatardefault.png?updatedAt=1749569332294")
     email  String  @unique
     role   Role    @default(USER)
     alerts Alert[]

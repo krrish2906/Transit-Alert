@@ -55,7 +55,7 @@ export default function ContactPage() {
                             </textarea>
                         </div>
                         <div className='w-4/5 flex justify-end'>
-                            <button type="submit" className='px-4 py-2 rounded-full bg-[#DBE8F2] font-semibold'>
+                            <button type="submit" className='text-white bg-[#0A80ED] rounded-full text-base font-semibold py-2 px-4'>
                                 Submit
                             </button>
                         </div>

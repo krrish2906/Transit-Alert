@@ -3,10 +3,12 @@
 import React, { useState } from 'react'
 
 export default function ProfilePage() {
-    const [isChecked, setIsChecked] = useState(false)
+    const [isChecked1, setIsChecked1] = useState(false)
+    const [isChecked2, setIsChecked2] = useState(false)
 
-    const handleCheckboxChange = () => {
-        setIsChecked(!isChecked)
+    const handleCheckboxChange = (num: number) => {
+        if(num == 1) setIsChecked1(!isChecked1);
+        else setIsChecked2(!isChecked2);
     }
 
     return (
@@ -50,16 +52,16 @@ export default function ProfilePage() {
                                 <input
                                     type='checkbox'
                                     className='sr-only'
-                                    checked={isChecked}
+                                    checked={isChecked1}
                                 />
                                 <div
                                     className='block h-8 w-14 rounded-full bg-[#E5E7EB] cursor-pointer'
-                                    onClick={handleCheckboxChange}>
+                                    onClick={() => handleCheckboxChange(1)}>
                                 </div>
                                 <div
                                     className={`dot absolute top-1 h-6 w-6 rounded-full bg-white z-10 cursor-pointer transition
-                                    ${isChecked ? "right-1 -translate-x-full" : "translate-x-full left-1"}`}
-                                    onClick={handleCheckboxChange}>
+                                    ${isChecked1 ? "right-1 -translate-x-full" : "translate-x-full left-1"}`}
+                                    onClick={() => handleCheckboxChange(1)}>
                                 </div>
                             </div>
                         </div>
@@ -72,16 +74,16 @@ export default function ProfilePage() {
                                 <input
                                     type='checkbox'
                                     className='sr-only'
-                                    checked={isChecked}
+                                    checked={isChecked2}
                                 />
                                 <div
                                     className='block h-8 w-14 rounded-full bg-[#E5E7EB] cursor-pointer'
-                                    onClick={handleCheckboxChange}>
+                                    onClick={() => handleCheckboxChange(2)}>
                                 </div>
                                 <div
                                     className={`dot absolute top-1 h-6 w-6 rounded-full bg-white z-10 cursor-pointer transition
-                                    ${isChecked ? "right-1 -translate-x-full" : "translate-x-full left-1"}`}
-                                    onClick={handleCheckboxChange}>
+                                    ${isChecked2 ? "right-1 -translate-x-full" : "translate-x-full left-1"}`}
+                                    onClick={() => handleCheckboxChange(2)}>
                                 </div>
                             </div>
                         </div>
