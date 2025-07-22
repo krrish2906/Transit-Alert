@@ -55,7 +55,7 @@ export default function ContactPage() {
                             </textarea>
                         </div>
                         <div className='w-4/5 flex justify-end'>
-                            <button type="submit" className='text-white bg-[#0A80ED] rounded-full text-base font-semibold py-2 px-4'>
+                            <button type="submit" className='text-white bg-[#0A80ED] rounded-full text-base font-semibold py-2 px-4 cursor-pointer'>
                                 Submit
                             </button>
                         </div>
@@ -84,19 +84,19 @@ export default function ContactPage() {
                     </div>
                     <div className='flex gap-10 pl-5 mt-2'>
                         <div className='flex flex-col items-center gap-3'>
-                            <div className='bg-[#EBEDF2] p-2.5 rounded-full w-fit'>
+                            <div className='bg-[#EBEDF2] p-2.5 rounded-full w-fit cursor-pointer'>
                                 <PiTwitterLogo className='size-6' />
                             </div>
                             <span className='text-sm'>Twitter</span>
                         </div>
                         <div className='flex flex-col items-center gap-3'> 
-                            <div className='bg-[#EBEDF2] p-2.5 rounded-full w-fit'>
+                            <div className='bg-[#EBEDF2] p-2.5 rounded-full w-fit cursor-pointer'>
                                 <PiFacebookLogo className='size-6' />
                             </div>
                             <span className='text-sm'>Facebook</span>
                         </div>
                         <div className='flex flex-col items-center gap-3'>
-                            <div className='bg-[#EBEDF2] p-2.5 rounded-full w-fit'>
+                            <div className='bg-[#EBEDF2] p-2.5 rounded-full w-fit cursor-pointer'>
                                 <PiInstagramLogo className='size-6' />
                             </div>
                             <span className='text-sm'>Instagram</span>

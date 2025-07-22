@@ -2,7 +2,7 @@
 
 // Modules import:-
 import React, { useState } from 'react'
-import { useSignUp } from '@clerk/nextjs';
+import { useSignUp, useUser } from '@clerk/nextjs';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 
@@ -14,6 +14,9 @@ import { PiEye, PiEyeClosed } from 'react-icons/pi';
 import Loading from '@/components/Loading';
 
 export default function SignUpPage() {
+    const { user } = useUser();
+    const router = useRouter();
+
     const { isLoaded, signUp, setActive } = useSignUp();
     
     const [showPassword, setShowPassword] = useState(false);
@@ -28,7 +31,14 @@ export default function SignUpPage() {
     const [password, setPassword] = useState('');
     const [confirmPassword, setConfirmPassword] = useState('');
 
-    const router = useRouter();
+    if (user) {
+        router.push('/');
+        return (
+            <div className='h-[calc(100vh-4rem)] w-full bg-white text-black flex flex-col justify-center items-center'>
+                <Loading />
+            </div>
+        );
+    }
 
     if (!isLoaded) {
         return (

@@ -1,7 +1,8 @@
 "use client"
 
 import React, { useState } from 'react'
-import { useUser } from '@clerk/nextjs';
+import { SignOutButton, useUser } from '@clerk/nextjs';
+import { VscSignOut } from 'react-icons/vsc';
 
 export default function ProfilePage() {
     const { user } = useUser();
@@ -167,7 +168,16 @@ export default function ProfilePage() {
                         </table>
                     </div>
                 </div>
+
+                <div className='flex justify-center'>
+                    <SignOutButton>
+                        <button className='text-white bg-red-500 px-6 py-2 font-bold cursor-pointer rounded-lg shadow hover:bg-red-500/90 flex gap-2 items-center'>
+                            Sign Out
+                            <VscSignOut className='size-5' />
+                        </button>
+                    </SignOutButton>
+                </div>
             </div>
         </div>
-    )
+    );
 }

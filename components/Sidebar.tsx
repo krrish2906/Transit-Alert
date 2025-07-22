@@ -8,7 +8,7 @@ export default function Sidebar() {
     const [selected, setSelected] = useState<SidebarData>(sidebar[0]);
 
     return (
-        <div className='p-5 flex flex-col w-[320px]'>
+        <div className='p-5 flex flex-col w-[320px] border-r border-gray-300/75'>
             <div className='flex flex-col ml-4'>
                 <h5 className='text-base font-medium'>Transit Alert</h5>
                 <span className='text-[13px] text-[#4D7599]'>Admin Panel</span>

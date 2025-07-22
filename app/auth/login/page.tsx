@@ -4,11 +4,12 @@ import Link from 'next/link';
 import React, { useState } from 'react'
 import { FcGoogle } from 'react-icons/fc';
 import { PiEye, PiEyeClosed } from 'react-icons/pi';
-import { useSignIn } from '@clerk/nextjs';
+import { useSignIn, useUser } from '@clerk/nextjs';
 import Loading from '@/components/Loading';
 import { useRouter } from 'next/navigation';
 
 export default function LogInPage() {
+    const { user } = useUser();
     const { isLoaded, signIn, setActive } = useSignIn();
     const router = useRouter();
     
@@ -18,6 +19,23 @@ export default function LogInPage() {
     const [isLoading, setIsLoading] = useState(false);
     const [showPassword, setShowPassword] = useState(false);
     const [error, setError] = useState('');
+
+    if (user) {
+        router.push('/');
+        return (
+            <div className='h-[calc(100vh-4rem)] w-full bg-white text-black flex flex-col justify-center items-center'>
+                <Loading />
+            </div>
+        );
+    }
+
+    if (!isLoaded) {
+        return (
+            <div className='h-[calc(100vh-4rem)] w-full bg-white text-black flex flex-col justify-center items-center'>
+                <Loading />
+            </div>
+        );
+    }
 
     async function handleGoogleSignIn() {
         if (!isLoaded) {
